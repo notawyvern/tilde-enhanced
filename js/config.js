@@ -10,7 +10,7 @@ const CONFIG = {
       name: 'Brave',
       key: '*',
       url: 'https://search.brave.com',
-      search: '/?q={}'
+      search: '/search?q={}'
     },
     {
       category: 'General',
