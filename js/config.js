@@ -13,7 +13,7 @@ const CONFIG = {
       search: '/search?q={}'
     },
     {
-      category: 'General',
+      category: 'Pessoal',
       name: 'Mail',
       key: 'm',
       url: 'https://account.proton.me/mail',
@@ -23,7 +23,7 @@ const CONFIG = {
       quickLaunch: true,
     },
     {
-      category: 'General',
+      category: 'Pessoal',
       name: 'Drive',
       key: 'd',
       url: 'https://account.proton.me/drive',
@@ -33,7 +33,7 @@ const CONFIG = {
       quickLaunch: false,
     },
     {
-      category: 'General',
+      category: 'Pessoal',
       name: 'WhatsApp',
       key: 'w',
       url: 'https://web.whatsapp.com',
@@ -43,7 +43,7 @@ const CONFIG = {
     },
 
     {
-      category: 'Programming',
+      category: 'Programação',
       name: 'ArchWiki',
       url: 'https://wiki.archlinux.org/',
       search: '/search?q={}',
@@ -53,7 +53,7 @@ const CONFIG = {
     },
 
     {
-      category: 'Programming',
+      category: 'Programação',
       name: 'GitHub',
       key: 'g',
       url: 'https://github.com',
@@ -63,7 +63,7 @@ const CONFIG = {
       quickLaunch: true,
     },
     {
-      category: 'Programming',
+      category: 'Programação',
       name: 'StackOverflow',
       key: 'st',
       url: 'https://stackoverflow.com',
@@ -73,7 +73,7 @@ const CONFIG = {
       quickLaunch: true,
     },
     {
-      category: 'Programming',
+      category: 'Programação',
       name: 'HackerNews',
       key: 'h',
       url: 'https://news.ycombinator.com/',
@@ -84,7 +84,7 @@ const CONFIG = {
     },
 
     {
-      category: 'Fun',
+      category: 'Diversão',
       name: 'Invidious',
       key: 'y',
       url: 'https://inv.nadeko.net',
@@ -94,7 +94,7 @@ const CONFIG = {
       quickLaunch: false,
     },
     {
-      category: 'Fun',
+      category: 'Diversão',
       name: 'Reddit',
       key: 'r',
       url: 'https://reddit.com',
@@ -105,7 +105,7 @@ const CONFIG = {
     },
 
     {
-      category: 'Fun',
+      category: 'Diversão',
       name: 'MAL',
       url: 'https://myanimelist.net/animelist/weeabotaku',
       color: 'linear-gradient(135deg, #E50914, #CB020C)',
@@ -114,7 +114,7 @@ const CONFIG = {
     },
 
     {
-      category: 'Fun',
+      category: 'Diversão',
       name: 'ListenBrainz',
       url: 'https://listenbrainz.org/',
       search: '/search/{}',
@@ -124,7 +124,7 @@ const CONFIG = {
     },
 
     {
-      category: 'Other',
+      category: 'Utilidades',
       name: 'LinkedIn',
       key: 'l',
       url: 'https://linkedin.com',
@@ -134,8 +134,8 @@ const CONFIG = {
       quickLaunch: true,
     },
     {
-      category: 'Other',
-      name: 'Translate',
+      category: 'Utilidades',
+      name: 'Tradutor',
       key: 'tr',
       url: 'https://translate.google.com/',
       search: '/#view=home&op=translate&sl=auto&tl=en&text={}',
