@@ -107,7 +107,7 @@ const CONFIG = {
     {
       category: 'Fun',
       name: 'MAL',
-      url: 'https://www.myanimelist.net',
+      url: 'https://myanimelist.net/animelist/weeabotaku',
       color: 'linear-gradient(135deg, #E50914, #CB020C)',
       icon: 'mal',
       quickLaunch: false,
