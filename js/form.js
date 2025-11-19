@@ -128,7 +128,9 @@ class Form {
         this._suggester.setOnUnhighlight(this._clearPreview);
       }
     }
-  
+
+    _setBackgroundFromQuery(query) {}
+
     _submitForm(e) {
       if (e) e.preventDefault();
       let query = this._inputEl.value;
