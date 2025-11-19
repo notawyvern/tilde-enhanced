@@ -125,6 +125,16 @@ const CONFIG = {
 
     {
       category: 'Utilidades',
+      name: 'MyNixOS',
+      url: 'https://mynixos.com/',
+      search: '/search?/q={}',
+      color: 'linear-gradient(135deg, #006CA4, #0077B5)',
+      icon: 'mynixos',
+      quickLaunch: true,
+    },
+
+    {
+      category: 'Utilidades',
       name: 'LinkedIn',
       key: 'l',
       url: 'https://linkedin.com',
