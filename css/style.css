@@ -250,7 +250,7 @@ a:focus {
   visibility: hidden;
 }
 
-.clock {
+.start {
   display: block;
   margin-top: -0.06rem;
   font-size: 4rem;
@@ -420,7 +420,7 @@ body.form .search-form {
     display: flex;
     padding: 0;
   }
-  .clock {
+  .start {
     font-size: 6rem;
   }
 

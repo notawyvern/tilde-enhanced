@@ -205,7 +205,7 @@ const CONFIG = {
   /**
    * Invert color theme
    */
-  invertedColors: false,
+  invertedColors: true,
 
   /**
    * Show keys instead of icons
@@ -223,16 +223,6 @@ const CONFIG = {
    * "r/r/unixporn" to go to "https://reddit.com/r/unixporn".
    */
   pathDelimiter: '/',
-
-  /**
-   * The delimiter between the hours and minutes on the clock.
-   */
-  clockDelimiter: ' ',
-
-  /**
-   * Show a twenty-four-hour clock instead of a twelve-hour clock with AM/PM.
-   */
-  twentyFourHourClock: true,
 
   /**
    * File extension for icon images
