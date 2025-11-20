@@ -1,4 +1,4 @@
-class Menu {
+class start {
     constructor(options) {
       this._el = $.el('#start');
       this._delimiter = options.delimiter;

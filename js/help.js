@@ -2,57 +2,11 @@ class Help {
     constructor(options) {
       this._el = $.el('#help');
       this._commands = options.commands;
-      this._newTab = options.newTab;
-      this._toggled = false;
-      this._handleKeydown = this._handleKeydown.bind(this);
-      this.toggle = this.toggle.bind(this);
-      this.launch = this.launch.bind(this);
-      this.launchCategory = this.launchCategory.bind(this);
-      this._inputEl = $.el('#search-input');
-      this._inputElVal = '';
-      this._suggester = options.suggester;
       this._buildAndAppendLists();
-      this._registerEvents();
     }
   
-    toggle(show) {
-      this._toggled = typeof show !== 'undefined' ? show : !this._toggled;
-      this._toggled ? $.bodyClassAdd('help') : $.bodyClassRemove('help');
-    }
-  
-    hide() {
-      $.bodyClassRemove('form');
-      this._inputEl.value = '';
-      this._inputElVal = '';
-      this._suggester.suggest('');
-    }
-  
-    launch() {
-      this.hide();
-      this.toggle(true);
-      $.bodyClassAdd('help');
-  
-      CONFIG.commands.forEach(command => {
-        if(command.quickLaunch) window.open(command.url);
-      });
-    }
-  
-    launchCategory(){
-      
-      const categorySet = new Set();
-  
-      CONFIG.commands.forEach(command => {
-        if(command.category) categorySet.add(command.category);
-      });
-  
-      const targetCategoryIndex = $.el('#search-input').value.replace('!', '');
-      const targetCategory = Array.from(categorySet)[targetCategoryIndex - 1];
-      
-      CONFIG.commands.forEach(command => {
-        if(targetCategory && command.category === targetCategory) window.open(command.url);
-      });
-    }
-  
+    toggle(show) { $.bodyClassAdd('help'); }
+
     _buildAndAppendLists() {
       const lists = document.createElement('ul');
       lists.classList.add('categories');
@@ -89,7 +43,7 @@ class Help {
                 }   
               </style>
               <li class="command">
-                <a href="${url}" target="${this._newTab ? '_blank' : '_self'}">
+                <a href="${url}" target="_self">
                   <span class="command-key command-key-${i}">${iconEl}</span>
                   <span class="command-name">${name}</span>
                 </a>
@@ -98,13 +52,13 @@ class Help {
           }
         })
         .join('');
-  
+
       const commandListWithKeys = this._commands
         .map(({ category, name, key, url }, i) => {
           if (category === currentCategory) {
             return `
               <li class="command">
-                <a href="${url}" target="${this._newTab ? '_blank' : '_self'}">
+                <a href="${url}" target="_self">
                       <style>
                         .command-key-${i} {
                           color: ${fgcolor}; 
@@ -121,7 +75,7 @@ class Help {
         })
         .join('');
   
-      return CONFIG.showKeys ? commandListWithKeys : commandListWithIcons;
+      return commandListWithIcons;
     }
   
     _getCategories() {
@@ -132,11 +86,4 @@ class Help {
       return [...new Set(categories)];
     }
   
-    _handleKeydown(e) {
-      if ($.key(e) === 'escape') this.toggle(false);
-    }
-  
-    _registerEvents() {
-      document.addEventListener('keydown', this._handleKeydown);
-    }
   }
