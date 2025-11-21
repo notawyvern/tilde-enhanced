@@ -100,14 +100,14 @@ const ui = new UI({
   commands: CONFIG.commands,
 });
 
-// button-like sign
+// sign-like button
 
 class start {
     constructor(options) {
       this._el = $.el('#start');
       this._delimiter = options.delimiter;
       this._el.addEventListener('click', options.toggleUI);
-      this._el.textContent = "~+";
+      this._el.textContent = "󰚀";
     }
 };
 
