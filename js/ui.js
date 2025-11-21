@@ -1,6 +1,14 @@
-class Help {
+// open ui
+
+const $ = {
+    bodyClassAdd: c => $.el('body').classList.add(c),
+    el: s => document.querySelector(s),
+
+  };
+
+class UI {
     constructor(options) {
-      this._el = $.el('#help');
+      this._el = $.el('#ui');
       this._commands = options.commands;
       this._buildAndAppendLists();
     }
@@ -87,3 +95,22 @@ class Help {
     }
   
   }
+
+const ui = new UI({
+  commands: CONFIG.commands,
+});
+
+// button-like sign
+
+class start {
+    constructor(options) {
+      this._el = $.el('#start');
+      this._delimiter = options.delimiter;
+      this._el.addEventListener('click', options.toggleUI);
+      this._el.textContent = "~+";
+    }
+};
+
+new start ({
+  toggleUI: ui.toggle,
+});
