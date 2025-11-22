@@ -1,6 +1,12 @@
-## Tweaking and Opinionated Purpose
+## Important Notes
+
+### Tweaking
 
 You can change it in [config.js](js/config.js), but features are few. Why? I use NixOS, a *declarative* system. My personal setup references this repository. It is easier to mantain if I have less to.
+
+### Dependencies
+
+To work out of the box, the DepartureMono Nerd Font should be installed. The Tao symbol button needs NF to render it. You can modify the icon in [ui.sh](./Homepage/js/ui.sh) and the font in [style.css](./Homepage/css/style.css).
 
 ## Screenshots 
 
